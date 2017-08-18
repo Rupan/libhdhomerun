@@ -68,7 +68,7 @@ endif()
 
 add_library(hdhomerun-shared SHARED ${SOURCES})
 if(UNIX AND NOT APPLE)
-  set_property(TARGET hdhomerun-shared PROPERTY VERSION "20161117")
+  set_property(TARGET hdhomerun-shared PROPERTY VERSION "20170815")
   set_property(TARGET hdhomerun-shared PROPERTY SOVERSION 1)
 endif()
 target_link_libraries(hdhomerun-shared ${DEPLIBS})
@@ -86,7 +86,7 @@ if(WIN32)
 endif()
 
 add_executable(hdhomerun_config hdhomerun_config.c)
-target_link_libraries(hdhomerun_config hdhomerun-shared)
+target_link_libraries(hdhomerun_config hdhomerun-static)
 
 include_directories(${PROJECT_SOURCE_DIR})
 
