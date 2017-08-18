@@ -21,5 +21,5 @@ utility suitable for sending commands or scripting control of a HDHomeRun.
 The top level API is hdhomerun_device - see hdhomerun_device.h for documentation.
 
 Additional libraries required:
-- pthread
-- iphlpapi (windows only)
+- pthread (osx, linux, bsd)
+- iphlpapi (windows)

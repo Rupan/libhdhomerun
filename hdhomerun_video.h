@@ -48,13 +48,13 @@ struct hdhomerun_video_stats_t {
  *
  * When no longer needed, the socket should be destroyed by calling hdhomerun_control_destroy.
  */
-extern LIBHDHOMERUN_API struct hdhomerun_video_sock_t *hdhomerun_video_create(uint16_t listen_port, bool_t allow_port_reuse, size_t buffer_size, struct hdhomerun_debug_t *dbg);
+extern LIBHDHOMERUN_API struct hdhomerun_video_sock_t *hdhomerun_video_create(uint16_t listen_port, bool allow_port_reuse, size_t buffer_size, struct hdhomerun_debug_t *dbg);
 extern LIBHDHOMERUN_API void hdhomerun_video_destroy(struct hdhomerun_video_sock_t *vs);
 
 /*
  * Configure to send a keepalive packet every second.
  */
-extern LIBHDHOMERUN_API void hdhomerun_video_set_keepalive(struct hdhomerun_video_sock_t *vs, uint32_t remote_addr, uint32_t remote_port, uint32_t lockkey);
+extern LIBHDHOMERUN_API void hdhomerun_video_set_keepalive(struct hdhomerun_video_sock_t *vs, uint32_t remote_addr, uint16_t remote_port, uint32_t lockkey);
 
 /*
  * Get the port the socket is listening on.
